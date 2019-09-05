@@ -1,0 +1,10 @@
+<h2>Edit user form !!!</h2>
+<form method="post" action="/users-edit/{{user._id}}">
+    <label for="username">Username</label>
+    <input name="username" type="text" value="{{ user.username }}">
+    <label for="password">Password</label>
+    <input name="password" type="password" value="{{ user.password}}">
+    <label for="email">Email</label>
+    <input name="email" type="text" value="{{user.email}}">
+    <button>Edit user</button>
+</form>

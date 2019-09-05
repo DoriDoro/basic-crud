@@ -1,0 +1,26 @@
+<h2>All users</h2>
+
+<table class="table">
+    <thead class="black white-text">
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+            <th scope="col">Email</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{ this.username }}</td>
+            <td>{{ this.password }}</td>
+            <td>{{this.email}}</td>
+            <td> <a href="/users/{{this._id}}/edit"><button>Edit</button></a> </td>
+            <td> <a href="/users/{{this._id}}/delete"><button>Delete</button></a></td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
